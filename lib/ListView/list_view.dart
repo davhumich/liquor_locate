@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ListView extends StatefulWidget {
-  const ListView({ super.key });
+class StoreListView extends StatefulWidget {
+  const StoreListView({ super.key });
 
   @override
-  State<ListView> createState() => _ListView();
+  State<StoreListView> createState() => _StoreListView();
 }
 
-class _ListView extends State<ListView> {
+class _StoreListView extends State<StoreListView> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: const Color(0xFFFFE306));
+    return Scaffold(
+      appBar: AppBar(title: Text("List View"),),
+      body: Container(color: const Color(0xFFFFE306)),
+    );
   }
 }

@@ -10,6 +10,9 @@ class ProfileView extends StatefulWidget {
 class _ProfileView extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: const Color.fromARGB(255, 111, 96, 172));
+    return Scaffold(
+      appBar: AppBar(title: Text("Profile View"),),
+      body: Container(color: const Color.fromARGB(255, 111, 96, 172)),
+    );
   }
 }

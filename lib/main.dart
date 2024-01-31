@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:liquor_locate/ListView/list_view.dart';
 import 'package:liquor_locate/MapView/map_view.dart';
 import 'package:liquor_locate/ProfileView/profile_view.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Liquor Locate',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 102, 183)),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 58, 102, 183)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Liquor Locate'),
@@ -42,31 +44,30 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-                  context,
-                  hideNavigationBarWhenKeyboardShows: true,
-                  controller: _controller,
-                  screens: [
-                    const MapView(),
-                    ListView(),
-                    const ProfileView(),
-                  ],
-                  items: _navBarsItems(),
-                  navBarStyle: NavBarStyle.style1,
-                  decoration: NavBarDecoration(
-                    border: const Border(
-                      top: BorderSide(width: 0.3),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 6,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                );
+      context,
+      hideNavigationBarWhenKeyboardShows: true,
+      controller: _controller,
+      screens: const [
+        MapView(),
+        StoreListView(),
+        ProfileView(),
+      ],
+      items: _navBarsItems(),
+      navBarStyle: NavBarStyle.style1,
+      decoration: NavBarDecoration(
+        border: const Border(
+          top: BorderSide(width: 0.3),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 4,
+            blurRadius: 6,
+            offset: const Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+    );
   }
 }
 
