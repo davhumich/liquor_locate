@@ -10,6 +10,6 @@ class ProfileView extends StatefulWidget {
 class _ProfileView extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Color.fromARGB(255, 111, 96, 172));
+    return Container(color: const Color.fromARGB(255, 111, 96, 172));
   }
 }

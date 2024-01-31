@@ -39,14 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);
 
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
@@ -54,9 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   hideNavigationBarWhenKeyboardShows: true,
                   controller: _controller,
                   screens: [
-                    MapView(),
+                    const MapView(),
                     ListView(),
-                    ProfileView(),
+                    const ProfileView(),
                   ],
                   items: _navBarsItems(),
                   navBarStyle: NavBarStyle.style1,

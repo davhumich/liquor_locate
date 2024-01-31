@@ -10,6 +10,6 @@ class MapView extends StatefulWidget {
 class _MapView extends State<MapView> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Color.fromARGB(255, 77, 173, 105));
+    return Container(color: const Color.fromARGB(255, 77, 173, 105));
   }
 }
